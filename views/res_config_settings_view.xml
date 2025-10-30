@@ -1,0 +1,34 @@
+<odoo>
+  <record id="lodinpay_res_config_settings_view_form" model="ir.ui.view">
+    <field name="name">lodinpay.res.config.settings.view.form.lodinpay</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//form" position="inside">
+        <app string="LodinPay"
+             data-string="LodinPay Settings"
+             name="lodinpay_settings"
+             icon="https://cdn.prod.website-files.com/633c15e27f94fe4a98e737b9/6562756445033320602c5ff0_Logo-LodIN%201-1.png">
+          
+          <div class="text-center mb16 mt16">
+            <img src="https://cdn.prod.website-files.com/633c15e27f94fe4a98e737b9/6562756445033320602c5ff0_Logo-LodIN%201-1.png"
+                 alt="LodinPay Logo"
+                 style="max-width: 220px; margin-bottom: 20px;"/>
+          </div>
+
+          <div class="app_settings_block mt16 mb16 p-3">
+            <h2 class="mb8">LodinPay Credentials</h2>
+            <group class="o_setting_box">
+              <field name="lodinpay_client_id"/>
+              <field name="lodinpay_client_secret" password="True"/>
+              <field name="lodinpay_device_static_id"/>
+            </group>
+            <p class="text-muted mt8">
+              These credentials are used to generate RTP payment links when invoices are posted.
+            </p>
+          </div>
+        </app>
+      </xpath>
+    </field>
+  </record>
+</odoo>
