@@ -9,7 +9,7 @@
     "data": [
         "views/account_move_view.xml",
         "views/res_config_settings_view.xml",
-        # "views/report_invoice_rtp.xml",  # ✅ NEW LINE
+        "views/report_invoice_rtp.xml",   # ✅ ENABLE THIS
 
     ],
     "images": ["static/description/icon.png"],
